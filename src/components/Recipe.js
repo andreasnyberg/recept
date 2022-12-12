@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ErrorPage from './ErrorPage';
-import data from '../recipes.js';
+import data from '../assets/recipes.js';
 
 const Recipe = () => {
   const [bigFontMode, setBigFontMode] = useState(false);

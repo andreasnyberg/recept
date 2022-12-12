@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
-import data from '../recipes.js';
+import data from '../assets/recipes.js';
 
 const Home = () => {
   const [ GRID, LIST ] = ['grid', 'list'];
