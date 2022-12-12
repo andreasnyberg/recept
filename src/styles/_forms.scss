@@ -33,7 +33,7 @@
     }
   }
 
-  // checkbox
+  // Circle
   & + label:before {
     content: '';
     background: #fff;
@@ -49,13 +49,12 @@
     vertical-align: text-top;
   }
 
-  // checkbox checked
   &:checked + label:before {
     background: $color-primary;
     border-color: $color-primary;
   }
 
-  // Checkmark. Could be replaced with an image
+  // Checkmark
   &:checked + label:after {
     content: '';
     position: absolute;

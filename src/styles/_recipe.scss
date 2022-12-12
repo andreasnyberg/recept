@@ -10,8 +10,24 @@
   }
 
   &.bigfont-mode {
-    label, li {
+    label {
       font-size: 22px;
+      line-height: 1.5;
+    }
+
+    .checkbox {
+
+      // Circle
+      & + label:before {
+        top: 5px;
+        transition: top 0.2s ease;
+      }
+        
+      // Checkmark
+      &:checked + label:after {
+        top: 17px;
+        transition: top 0.2s ease;
+      }
     }
   }
 }
@@ -34,7 +50,7 @@
 }
 
 .recipe-ingredients li {
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .recipe-steps {
@@ -90,13 +106,8 @@
     }
 
     &.bigfont-mode {
-
-      label {
-        padding-left: 50px;
-      }
-
       li {
-        font-size: 26px;
+        font-size: 18px;
       }
 
       .recipe-sections {
@@ -125,10 +136,6 @@
     .recipe-steps {
       flex-basis: 65%;
     }
-  }
-
-  .recipe-ingredients li {
-    margin-bottom: 12px;
   }
 }
 
