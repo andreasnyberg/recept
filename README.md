@@ -1,3 +1,21 @@
+# Recept 🍝🍲
+
+[Recipe collection](https://andreasnyberg.github.io/recept/#/) with hardcoded data. [The previous version](https://github.com/andreasnyberg/recipes) (prisma/graphQL) stopped working when heroku didnt want to host it for free anymore.
+
+Start dev server:
+```
+npm start
+```
+
+Deploy to GH pages:
+```
+npm deploy
+```
+
+---
+---
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
