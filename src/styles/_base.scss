@@ -1,0 +1,96 @@
+$color-primary: #e7bb39;
+$color-background-light: #fbfbfb;
+$color-background-dark: #999;
+$text-color: #2c3e50;
+$list-tool-color: #ddd;
+$list-tool-color--hover: darken($list-tool-color, 8%);
+$list-tool-button-size--mobile: 60px;
+$list-tool-button-size: 70px;
+
+$gutter: 15px;
+$dialog-button-margin: 12px;
+$dialog-border-radius: 24px;
+
+$dialog-margin--tablet: 16px;
+$dialog-button-margin--tablet: 40px;
+$dialog-border-radius--tablet: 32px;
+
+$font-family: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif;
+
+@mixin input-focus {
+  &:focus {
+    border-color: darken($color-primary, 5%);
+    box-shadow: 0 0 0 0.25rem rgba($color-primary, .3);
+    outline: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-background-dark;
+  margin: 0;
+  font-family: $font-family;
+}
+
+.App {
+  background-color: $color-background-light;
+  color: $text-color;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+ul, ol {
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  >.border-button {
+    margin-right: 10px;
+  }
+}
+
+.login-window {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+
+  form {
+    background-color: #ddd;
+    border-bottom-left-radius: 12px;
+    box-shadow: 0 7px 30px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .recipe-input {
+    margin-bottom: 8px;
+  }
+
+  .border-button {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 { font-size: 50px; }
+  h2 { font-size: 30px; }
+}

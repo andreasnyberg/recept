@@ -1,0 +1,33 @@
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: (350rem/16);
+}
+
+.loading-spinner > .bounce {
+	background-color: #ccc;
+
+	width: (18rem/16);
+	height: (18rem/16);
+
+	border-radius: 100%;
+	display: inline-block;
+	animation: bouncedelay 1.2s infinite ease-in-out both;
+}
+
+.loading-spinner .bounce--1 {
+	animation-delay: -0.32s;
+}
+
+.loading-spinner .bounce--2 {
+	animation-delay: -0.16s;
+}
+
+@keyframes bouncedelay {
+	0%, 80%, 100% {
+		transform: scale(0);
+	} 40% {
+		transform: scale(0.7);
+	}
+}

@@ -1,0 +1,121 @@
+.button {
+  @include input-focus;
+}
+
+.border-button {
+  background-color: rgba(0,0,0,0);
+  border: 1px solid #999;
+  border-radius: 1000px;
+  color: #999;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 10px;
+  height: 30px;
+  padding: 0 18px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  span {
+    line-height: normal;
+    margin-left: 6px;
+    opacity: 0.6;
+  }
+
+  &:hover {
+    border-color: #555;
+    color: #555;
+
+    span {
+      opacity: 0.9;
+    }
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+
+  &.post-button { margin: 60px auto; }
+  &.add-step-button { width: 80%; }
+}
+
+.border-button--medium {
+  height: 40px;
+}
+
+.border-button--big {
+  border-width: 2px;
+  font-size: 14px;
+  height: 60px;
+  min-width: 350px;
+
+  span {
+    margin-left: 12px;
+  }
+}
+
+.floating-button {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 25px 85px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+
+  @media screen and (min-width: 768px) { border-radius: 10px; }
+
+  &:hover {
+    background-color: #ddd;
+    color: #000;
+  }
+
+  &:active {
+    background-color: #ccc;
+  }
+}
+
+.floating-button--round {
+  $size: 80px;
+
+  display: block;
+  border-radius: 1000px;
+  width: $size;
+  height: $size;
+
+  &:after { border-radius: 1000px; }
+}
+
+.floating-button--link {
+  color: $text-color;
+  font-weight: bold;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+
+.dialog-close-button {
+  background-image: url('../assets/icon-close.png');
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  right: $dialog-button-margin;
+  top: $dialog-button-margin;
+  z-index: 1;
+}
+
+.toggle-bigfont-mode {
+  background-image: url('../assets/icon-bigfont.svg');
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  left: $dialog-button-margin;
+  bottom: $dialog-button-margin;
+}

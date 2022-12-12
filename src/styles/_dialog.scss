@@ -1,0 +1,39 @@
+.dialog-outer {
+  background-color: $color-background-dark;
+  height: 100vh;
+}
+
+.dialog {
+  background-color: $color-background-light;
+  border-radius: $dialog-border-radius;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.dialog-inner {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
+@media screen and (min-width: 768px) {
+  .dialog {
+    padding: $dialog-margin--tablet;
+    background: $color-background-dark;
+    border-radius: 0;
+  }
+
+  .dialog-inner {
+    background-color: $color-background-light;
+    border-radius: $dialog-border-radius--tablet;
+    height: auto;
+    min-height: 100%;
+  }
+
+  .dialog-close-button {
+    right: $dialog-button-margin--tablet;
+    top: $dialog-button-margin--tablet;
+  }
+}

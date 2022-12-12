@@ -1,0 +1,143 @@
+.recipe {
+  padding: 0 20px;
+
+  label, li {
+    transition: font-size 0.2s ease;
+  }
+
+  h1 {
+    width: 73%;
+  }
+
+  &.bigfont-mode {
+    label, li {
+      font-size: 22px;
+    }
+  }
+}
+
+.recipe-meta {
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+
+  p { margin: 0; }
+
+  .recipe-meta-separator {
+    margin: 0 12px;
+  }
+
+  * {
+    color: #bbb;
+  }
+}
+
+.recipe-ingredients li {
+  margin-bottom: 10px;
+}
+
+.recipe-steps {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+.ingredients-container {
+  flex-basis: 40%;
+  padding-right: $gutter;
+
+  .recipe-input {
+    height: 400px;
+  }
+}
+
+.steps-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 60%;
+
+  .recipe-input {
+    height: 100px;
+    margin-bottom: $gutter;
+  }
+}
+
+.step-row {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .toggle-bigfont-mode {
+    left: $dialog-button-margin--tablet;
+    bottom: $dialog-button-margin--tablet;
+  }
+
+  .recipe {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    h1 {
+      margin-bottom: 60px;
+      width: 100%;
+    }
+
+    .recipe-ingredients {
+      ul, ol { padding-right: 30px; }
+    }
+
+    &.bigfont-mode {
+
+      label {
+        padding-left: 50px;
+      }
+
+      li {
+        font-size: 26px;
+      }
+
+      .recipe-sections {
+        flex-direction: column;
+      }
+
+      .recipe-ingredients {
+        margin-bottom: 40px;
+      }
+
+      .recipe-steps {
+        .step-row {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  .recipe-sections {
+    display: flex;
+
+    .recipe-ingredients {
+      flex-basis: 35%;
+    }
+
+    .recipe-steps {
+      flex-basis: 65%;
+    }
+  }
+
+  .recipe-ingredients li {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .recipe {
+    &.bigfont-mode {
+      .recipe-sections {
+        flex-direction: row;
+      }
+    }
+  }
+}
