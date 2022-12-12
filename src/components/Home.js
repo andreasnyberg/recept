@@ -9,6 +9,8 @@ const Home = () => {
   const [isOrderAsc, setIsOrderAsc] = useState(true);
   const [listStyle, setListStyle] = useState(LIST);
 
+  const recipes = _.orderBy(data, 'title', `${isOrderAsc ? 'asc' : 'desc'}`);
+
   const handleSearchChange = (e) => {
     //setSearchFilter(e.target.value)
   }
@@ -59,9 +61,9 @@ const Home = () => {
       </div>
 
       <ul className={`recipe-list ${listStyle}`}>
-        {data && (
+        {recipes && (
           <>
-            {data.map((recipe) => (
+            {recipes.map((recipe) => (
               <li className="recipe-list-item" key={recipe.id}>
                 <Link to={`/${recipe.path}`} className="button recipe-link floating-button">
                   <h2>{recipe.title}</h2>
