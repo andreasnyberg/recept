@@ -9,7 +9,7 @@ npm start
 
 Deploy to GH pages:
 ```
-npm deploy
+npm run deploy
 ```
 
 ---
