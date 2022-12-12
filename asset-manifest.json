@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/recept/static/css/main.512b1d59.chunk.css",
-    "main.js": "/recept/static/js/main.aba8a53d.chunk.js",
-    "main.js.map": "/recept/static/js/main.aba8a53d.chunk.js.map",
+    "main.css": "/recept/static/css/main.8ad6ed8c.chunk.css",
+    "main.js": "/recept/static/js/main.1d22fe30.chunk.js",
+    "main.js.map": "/recept/static/js/main.1d22fe30.chunk.js.map",
     "runtime-main.js": "/recept/static/js/runtime-main.8a69bed4.js",
     "runtime-main.js.map": "/recept/static/js/runtime-main.8a69bed4.js.map",
-    "static/js/2.934498e8.chunk.js": "/recept/static/js/2.934498e8.chunk.js",
-    "static/js/2.934498e8.chunk.js.map": "/recept/static/js/2.934498e8.chunk.js.map",
+    "static/js/2.ddacd32c.chunk.js": "/recept/static/js/2.ddacd32c.chunk.js",
+    "static/js/2.ddacd32c.chunk.js.map": "/recept/static/js/2.ddacd32c.chunk.js.map",
     "index.html": "/recept/index.html",
-    "static/css/main.512b1d59.chunk.css.map": "/recept/static/css/main.512b1d59.chunk.css.map",
-    "static/js/2.934498e8.chunk.js.LICENSE.txt": "/recept/static/js/2.934498e8.chunk.js.LICENSE.txt",
+    "static/css/main.8ad6ed8c.chunk.css.map": "/recept/static/css/main.8ad6ed8c.chunk.css.map",
+    "static/js/2.ddacd32c.chunk.js.LICENSE.txt": "/recept/static/js/2.ddacd32c.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/recept/static/media/icon-sort2.0d51ce90.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8a69bed4.js",
-    "static/js/2.934498e8.chunk.js",
-    "static/css/main.512b1d59.chunk.css",
-    "static/js/main.aba8a53d.chunk.js"
+    "static/js/2.ddacd32c.chunk.js",
+    "static/css/main.8ad6ed8c.chunk.css",
+    "static/js/main.1d22fe30.chunk.js"
   ]
 }
