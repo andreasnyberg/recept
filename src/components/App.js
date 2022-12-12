@@ -1,5 +1,6 @@
 import {
   BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
 } from 'react-router-dom';
@@ -18,27 +19,29 @@ function App(props) {
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Route exact path="/">
-            <Header />
-            <Home />
-          </Route>
+        <HashRouter basename="/">
+          <Switch>
+            <Route exact path="/">
+              <Header />
+              <Home />
+            </Route>
 
-          <Route path="/recept/:pathTitle">
-            <RecipeWithDialog />
-          </Route>
+            <Route path="/recept/:pathTitle">
+              <RecipeWithDialog />
+            </Route>
 
-          <Route path="/add-new">
-            <AddNewWithDialog />
-          </Route>
+            <Route path="/add-new">
+              <AddNewWithDialog />
+            </Route>
 
-          <Route path="*">
-            <ErrorPage>
-              <h1>Ooops..</h1>
-              <h3>Denna sida verkar inte existera 😕</h3>
-            </ErrorPage>
-          </Route>
-        </Switch>
+            <Route path="*">
+              <ErrorPage>
+                <h1>Ooops..</h1>
+                <h3>Denna sida verkar inte existera 😕</h3>
+              </ErrorPage>
+            </Route>
+          </Switch>
+        </HashRouter>
       </Router>
     </div>
   );
