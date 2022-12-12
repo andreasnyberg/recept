@@ -26,7 +26,7 @@ function App(props) {
               <Home />
             </Route>
 
-            <Route path="/recept/:pathTitle">
+            <Route path="/:path">
               <RecipeWithDialog />
             </Route>
 

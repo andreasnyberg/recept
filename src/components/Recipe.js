@@ -1,47 +1,19 @@
 import React, { useState } from 'react';
-import { useQuery, gql } from '@apollo/client';
 import { useParams } from 'react-router-dom';
 import ErrorPage from './ErrorPage';
-import LoadingSpinner from './LoadingSpinner';
-
-const RECIPE_QUERY = gql`
-  query recipeQuery($pathTitle: String!)
-  {
-    recipe(pathTitle: $pathTitle) {
-      id
-      title
-      source
-      noOfPortions
-      pathTitle
-      ingredients {
-        id
-        name
-      }
-      steps {
-        id
-        name
-      }
-    }
-  }
-`;
+import data from '../recipes.js';
 
 const Recipe = () => {
   const [bigFontMode, setBigFontMode] = useState(false);
-  let { pathTitle } = useParams();
-  const { loading, error, data } = useQuery(RECIPE_QUERY, {
-    variables: { pathTitle: pathTitle },
-  });
+  let { path } = useParams();
+  const recipe = data.find(item => item.path === path);
 
-  if (loading) return <LoadingSpinner />;
-  if (error) return (
+  if (!recipe) return (
     <ErrorPage>
       <h1>Ajdå! 😕</h1>
-      <h3>Error:</h3>
-      <p>{error.message}</p>
+      <h3>Receptet kan ej hittas...</h3>
     </ErrorPage>
   );
-
-  const { recipe } = data;
 
   const handleBigFontMode = () => {
     setBigFontMode(!bigFontMode);
@@ -69,13 +41,12 @@ const Recipe = () => {
         )
       }
 
-
       <div className="recipe-sections">
         <div className="recipe-ingredients">
           <h2>Ingredienser</h2>
           <ul>
-            {recipe.ingredients.map(item => (
-              <li key={item.id}>{item.name}</li>
+            {recipe.ingredients.map(ingredient => (
+              <li key={ingredient}>{ingredient}</li>
             ))}
           </ul>
         </div>
@@ -83,10 +54,10 @@ const Recipe = () => {
         <div className="recipe-steps">
           <h2>Tillagning</h2>
           <ul>
-            {recipe.steps.map(item => (
-              <li key={item.id} className="step-row">
-                <input className="checkbox" id={`recipe-step-checkbox-${item.id}`} type="checkbox" value="value1" />
-                <label htmlFor={`recipe-step-checkbox-${item.id}`}>{item.name}</label>
+            {recipe.steps.map((step, index) => (
+              <li key={step} className="step-row">
+                <input className="checkbox" id={`recipe-step-checkbox-${index}`} type="checkbox" value="value1" />
+                <label htmlFor={`recipe-step-checkbox-${index}`}>{step}</label>
               </li>
             ))}
           </ul>
